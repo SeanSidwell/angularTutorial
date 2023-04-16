@@ -31,6 +31,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { TableTestingComponent } from './table-testing/table-testing.component'
 
+import { RouterModule } from '@angular/router';
+
 
 
 @NgModule({
@@ -65,7 +67,10 @@ import { TableTestingComponent } from './table-testing/table-testing.component'
     MatSelectModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    RouterModule.forRoot([
+      {path: '' , component: NewFormComponent}
+    ])
   ],
   exports:[
 
