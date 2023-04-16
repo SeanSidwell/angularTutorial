@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-form1',
@@ -8,8 +8,21 @@ import { FormBuilder } from '@angular/forms';
 })
 export class Form1Component {
 
+  myForm!: FormGroup;
+
   constructor(private formBuilder: FormBuilder){
+
     
+  }
+
+  ngOnInit(){
+    this.myForm = this.formBuilder.group({
+      email:'',
+      message:'',
+      career:''
+    })
+
+    this.myForm.valueChanges.subscribe(console.log)
   }
 
 }

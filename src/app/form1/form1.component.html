@@ -1,1 +1,20 @@
-<p>form1 works!</p>
+
+<form [formGroup]="myForm">
+
+value: {{myForm.value |json}}
+
+<hr>
+
+<mat-form-field>
+    <input matInput placeholder="email" formControlName="email">
+</mat-form-field>
+
+<mat-form-field>
+    <input matInput placeholder="email" formControlName="email">
+</mat-form-field>
+
+<mat-form-field>
+    <input matInput placeholder="email" formControlName="email">
+</mat-form-field>
+
+</form>
